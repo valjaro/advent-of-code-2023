@@ -1,5 +1,5 @@
 # # Part 1
-with open('input.txt') as f:
+with open('day 1\input.txt') as f:
     lines = f.readlines()
     numbers = []
     for line in lines:
@@ -13,10 +13,10 @@ with open('input.txt') as f:
                 m = line[y]
                 break
         numbers.append(int(n + m))
-#     print(sum(numbers))
+print(sum(numbers))
 
 # #### ###Part 2
-with open('input2.txt') as f:
+with open('day 1\input.txt') as f:
     words_to_check = [
         "1", "2", "3", "4", "5", "6", "7", "8", "9",
         "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"
@@ -62,5 +62,5 @@ with open('input2.txt') as f:
 
             numbers.append(int(first_occurrence_word + last_occurrence_word))
 
-    print(sum(numbers))
+print(sum(numbers))
 
