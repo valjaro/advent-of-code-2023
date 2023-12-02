@@ -30,7 +30,8 @@ for i in s.strip().split("\n"):
     if not big:
         ids += id
 print(ids)
-# #### ###Part 2
+######## Part 2
+
 ids_2 = 0
 for i in s.strip().split("\n"):
     id, g = i.split(":")
