@@ -19,8 +19,8 @@ for i, line in enumerate(s):
     winners, game = line.split('|')
     winners = winners.split(':')[1].strip()
     game.strip()
-    game = [int(number) for number in game.split()]
-    winners = [int(number) for number in winners.split()]
+    game = set(map(int, game.split()))
+    winners = set(map(int, winners.split()))
     win_numbers = list(set(game).intersection(winners))
     card = 0
     for i in range(len(win_numbers)):
@@ -30,7 +30,7 @@ print(r)
 r2 = 0
 card_ids, card_list= [], []
 ################## Part 2
-for i, line in enumerate(s):
+for line in s:
     card_id, winners = line.split(':')
     card_ids.append(card_id)
     card_list.append(1)
@@ -38,8 +38,8 @@ for i, line in enumerate(s):
     card_id, winners = line.split(':')
     winners, game = winners.split('|')
     game.strip()
-    game = [int(number) for number in game.split()]
-    winners = [int(number) for number in winners.split()]
+    game = set(map(int, game.split()))
+    winners = set(map(int, winners.split()))
     win_numbers = list(set(game).intersection(winners))
     index, old_index = card_ids.index(card_id), card_ids.index(card_id)
     for _add in range(len(win_numbers)):
